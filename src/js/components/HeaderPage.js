@@ -18,9 +18,7 @@ export default class Header extends React.Component {
       <header className={this.state.style}>
       <div className="container">
         <div className="branding">
-        <h1 className="logo">
-            <span className="text-highlight">Trubo</span><span class="text-bold">Kitty</span>
-        </h1>
+          <Logo size="24" />
         </div>
         <Nav title={this.props.title} />
       </div>

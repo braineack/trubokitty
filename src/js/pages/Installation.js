@@ -1,6 +1,7 @@
 import React from "react";;
 import { Scrollspy } from 'react-scrollspy';
 import AutoAffix from 'react-overlays/lib/AutoAffix';
+import Scrollchor from "react-scrollchor";
 
 import HeaderPage from "../components/HeaderPage";
 import ArticlesStore from "../stores/ArticlesStore"
@@ -16,23 +17,22 @@ export default class Installation extends React.Component {
     const AffixNav = (
       <AutoAffix viewportOffsetTop={20} container={this}>
         <Scrollspy items={ ['components', 'connecting-ms', 'wiring-peripherals', 'nuances'] } currentClassName="active" id="doc-menu" className="nav doc-menu hidden-xs">
-            <li><a className="scrollto" href="#components">Required Tools</a></li>
-            <li><a className="scrollto" href="#connecting-ms">Connecting the Megasquirt</a></li>
-            <li><a className="scrollto" href="#wiring-peripherals">Wiring the Peripherals</a>
+            <li><Scrollchor to="#components">Required Tools</Scrollchor></li>
+            <li><Scrollchor to="#connecting-ms">Connecting the Megasquirt</Scrollchor></li>
+            <li><Scrollchor to="#wiring-peripherals">Wiring the Peripherals</Scrollchor>
               <Scrollspy items={ ['ait', 'fuelpump', 'ebc-power', 'ebc-plumbing', 'map'] } currentClassName="active" className="nav doc-sub-menu">
-                <li><a className="scrollto" href="#ait">Air Intake Temp (AIT) Sensor</a></li>
-                <li><a className="scrollto" href="#fuelpump">90-93 Fuel Pump</a></li>
-                <li><a className="scrollto" href="#ebc-power">EBC Power</a></li>
-                <li><a className="scrollto" href="#ebc-plumbing">EBC Plumbing</a></li>
-                <li><a className="scrollto" href="#map">MAP Sensor</a></li>
+                <li><Scrollchor to="#ait">Air Intake Temp (AIT) Sensor</Scrollchor></li>
+                <li><Scrollchor to="#fuelpump">90-93 Fuel Pump</Scrollchor></li>
+                <li><Scrollchor to="#ebc-power">EBC Power</Scrollchor></li>
+                <li><Scrollchor to="#ebc-plumbing">EBC Plumbing</Scrollchor></li>
+                <li><Scrollchor to="#map">MAP Sensor</Scrollchor></li>
               </Scrollspy>
             </li>
-            <li>
-              <a className="scrollto" href="#nuances">Nuances</a>
+            <li><Scrollchor to="#nuances">Nuances</Scrollchor>
               <Scrollspy items={ ['tps', 'tach', 'seq'] } currentClassName="active" className="nav doc-sub-menu">
-                <li><a className="scrollto" href="#tps">90-93 TPS</a></li>
-                <li><a className="scrollto" href="#tach">90-95 Tach Signal</a></li>
-                <li><a className="scrollto" href="#seq">90-93 Sequential Fueling</a></li>
+                <li><Scrollchor to="#tps">90-93 TPS</Scrollchor></li>
+                <li><Scrollchor to="#tach">90-95 Tach Signal</Scrollchor></li>
+                <li><Scrollchor to="#seq">90-93 Sequential Fueling</Scrollchor></li>
               </Scrollspy>
             </li>
         </Scrollspy>
@@ -388,11 +388,14 @@ export default class Installation extends React.Component {
                         </div>{/*//content-inner*/}
                       </div>{/*//doc-content*/}
                       <div className="doc-sidebar affix-top">
-                        <nav id="nav-doc">
-                          {AffixNav}
+                      <nav id="nav-doc">
+                        {AffixNav}
                         </nav>
                       </div>{/*//doc-sidebar*/}
                     </div>
+
+
+
             </div>
           </div>
         </div>

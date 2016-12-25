@@ -927,21 +927,31 @@ select {
 }
 .body-green .doc-sub-menu > li.active > a {
   color: #75c181;
+  border-left: 2px solid #75c181;
 }
 .body-blue .doc-sub-menu > li.active > a {
   color: #58bbee;
+  border-left: 2px solid #58bbee;
 }
 .body-orange .doc-sub-menu > li.active > a {
   color: #F88C30;
+  border-left: 2px solid #F88C30;
 }
 .body-red .doc-sub-menu > li.active > a {
   color: #f77b6b;
+  border-left: 2px solid #f77b6b;
 }
 .body-pink .doc-sub-menu > li.active > a {
   color: #EA5395;
+  border-left: 2px solid #EA5395;
 }
 .body-purple .doc-sub-menu > li.active > a {
   color: #8A40A7;
+  border-left: 2px solid #8A40A7;
+}
+.body-primary .doc-sub-menu > li.active > a {
+  color: #40babd;
+  border-left: 2px solid #40babd;
 }
 .affix-top {
   position: absolute;
