@@ -19,7 +19,8 @@ export default class Index extends React.Component {
     const Articles = pages.map((page) => {
       return <div key={page.id}><Link to={page.link} params={page.color}><Article {...page} /></Link></div>;
     });
-
+    var siteName = 'truboKitty.com -- Plug & Play Megasquirt ECUs Assembly Guide for 1900-2005 Mazda Miatas'
+    document.title = siteName;
     return (
       <div class="landing-page">
         <Header />

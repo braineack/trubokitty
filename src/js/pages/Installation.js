@@ -1,10 +1,11 @@
-import React from "react";;
+import React from "react";
 import { Scrollspy } from 'react-scrollspy';
 import AutoAffix from 'react-overlays/lib/AutoAffix';
 import Scrollchor from "react-scrollchor";
 
 import HeaderPage from "../components/HeaderPage";
-import ArticlesStore from "../stores/ArticlesStore"
+import ArticlesStore from "../stores/ArticlesStore";
+import ImageModal from "../components/Modal";
 
 export default class Installation extends React.Component {
   constructor() {
@@ -81,10 +82,7 @@ export default class Installation extends React.Component {
                                   </ul>
                                 </div>
                                 <div className="col-md-6 col-sm-6 col-xs-12">
-                                  <div className="screenshot-holder">
-                                    <a href="assets/images/ms3x_assembled_parts.jpg" data-title="MS3x Parts Ready For Installation" data-toggle="lightbox"><img className="img-responsive" src="assets/images/ms3x_assembled_parts.jpg" alt="screenshot" /></a>
-                                    <a className="mask" href="assets/images/ms3x_assembled_parts.jpg" data-title="MS3x Parts Ready For Installation" data-toggle="lightbox"><i className="icon fa fa-search-plus" /></a>
-                                  </div>
+                                  <ImageModal img="assets/images/ms3x_assembled_parts.jpg" title="MS3x Parts Ready For Installation" mask="true" alt="MS3X Parts"/>
                                 </div>
                               </div>
                               <br />
@@ -117,21 +115,21 @@ export default class Installation extends React.Component {
                                   <h6>90-93</h6>
                                   <p>Your ECU is located <strong>under</strong> the passenger foot rest.  Remove the passenger door-sill with a Phillips head screw driver and pull the carpet down. The ECU kick-plate can be lifted off after removing (5) 10mm nuts.</p>
                                   <div className="screenshot-holder">
-                                    <img className="img-responsive" src="assets/images/oe_ecu_9093.png" alt="screenshot" />
+                                    <img className="img-responsive thumbnail" src="assets/images/oe_ecu_9093.png" alt="screenshot" />
                                   </div>
                                 </div>
                                 <div className="col-md-4 col-sm-4 col-xs-12">
                                   <h6>94-97</h6>
                                   <p>Your ECU is located <strong>behind</strong> the passenger seat.  Remove the passenger door-sill with a Phillips head screw driver and pull the carpet down off the ECU. The ECU can be lifted off after removing (3) 10mm nuts.</p>
                                   <div className="screenshot-holder">
-                                    <img className="img-responsive" src="assets/images/oe_ecu_9497.png" alt="screenshot" />
+                                    <img className="img-responsive thumbnail" src="assets/images/oe_ecu_9497.png" alt="screenshot" />
                                   </div>
                                 </div>
                                 <div className="col-md-4 col-sm-4 col-xs-12">
                                   <h6>99-05</h6>
                                   <p>Your ECU is <strong>under</strong> the dash next to the steering column. The Singular Motorsports mounting bracket is recommended for NB MS3x installations, the DIYPNP can ziptie to the OE bracket like shown.</p>
                                   <div className="screenshot-holder">
-                                    <img className="img-responsive" src="assets/images/99_miata_diypnp_mounted.jpg" alt="screenshot" />
+                                    <img className="img-responsive thumbnail" src="assets/images/99_miata_diypnp_mounted.jpg" alt="screenshot" />
                                   </div>
                                 </div>
                               </div>{/*//row*/}
@@ -160,27 +158,18 @@ export default class Installation extends React.Component {
                                   <h6 id="fuelpump">90-93 (NA) Air Flow Meter (AFM) Connector</h6>
                                   <p>Using a small length of wire leftover from the installation kit, jump the two pins for the fuel pump. This connects the MS to the fuel pump relay so it can control the fuel pump properly.</p>
                                   <p>The EBC solenoid must be connected to a switched power supply inside the engine bay. The blue power connector near the driver{"'"}s headlight is the ideal choice.</p>
-                                  <div className="screenshot-holder">
-                                    <a href="assets/images/AFM_Fuel_Jumpers.png" data-title="90-93 AFM Connector" data-toggle="lightbox"><img className="img-responsive" src="assets/images/AFM_Fuel_Jumpers_thumb.png" alt="screenshot" /></a>
-                                    <a className="mask" href="assets/images/AFM_Fuel_Jumpers.png" data-title="90-93 AFM Connector" data-toggle="lightbox"><i className="icon fa fa-search-plus" /></a>
-                                  </div>
+                                  <ImageModal img="assets/images/AFM_Fuel_Jumpers.png" title="90-93 AFM Connector" />
                                 </div>
                                 <div className="col-md-4 col-sm-6 col-xs-12">
                                   <h6>94-97 (NA) Mass Air Flow (MAF) Connector</h6>
                                   <p>Because the MAF connector already has a switched 12v location, we can wire the EBC solenoid directly into it.</p>
-                                  <div className="screenshot-holder">
-                                    <a href="assets/images/MAF_Jumpers.png" data-title="94-97 MAF Connector" data-toggle="lightbox"><img className="img-responsive" src="assets/images/MAF_Jumpers_thumb.png" alt="screenshot" /></a>
-                                    <a className="mask" href="assets/images/MAF_Jumpers.png" data-title="94-97 MAF Connector" data-toggle="lightbox"><i className="icon fa fa-search-plus" /></a>
-                                  </div>
+                                  <ImageModal img="assets/images/MAF_Jumpers.png" title="94-97 MAF Connector" />
                                 </div>
                                 <div className="col-md-4 col-sm-6 col-xs-12">
                                   <h6>99-05 (NB/NB2) Mass Air Flow (MAF) Connector</h6>
                                   <p>Only the EBC solenoid gets wired to the NB/NB2 MAF connector.</p>
                                   <p>The AIT sensor is located just behind the MAF directly on the intake pipe, unplug it and use that connector in the same fashion as the above.</p>
-                                  <div className="screenshot-holder">
-                                    <a href="assets/images/NB2_MAF.png" data-title="99-05 MAF Connector" data-toggle="lightbox"><img className="img-responsive" src="assets/images/NB2_MAF_thumb.png" alt="screenshot" /></a>
-                                    <a className="mask" href="assets/images/NB2_MAF.png" data-title="99-05 MAF Connector" data-toggle="lightbox"><i className="icon fa fa-search-plus" /></a>
-                                  </div>
+                                  <ImageModal img="assets/images/NB2_MAF.png" title="99-05 MAF Connector" />
                                 </div>
                               </div>{/*//row*/}
                               <p>With the provided wire and contacts in the AIT sensor bundle, wire your new GM AIT sensor by pushing the spade connectors installed on the end of the wires directly into the AFM/MAF harness using the Pin locations below; polarity doesn’t matter.</p>
@@ -222,10 +211,7 @@ export default class Installation extends React.Component {
                               <div className="row">
                                 <div className="col-md-6 col-sm-6 col-xs-12">
                                   <h6>EBC solenoid plumbing</h6>
-                                  <div className="screenshot-holder">
-                                    <a href="assets/images/EBC_Plumbing.png" data-toggle="lightbox" data-title="EBC solenoid plumbing"><img className="img-responsive" src="assets/images/EBC_Plumbing_thumb.png" alt="screenshot" /></a>
-                                    <a className="mask" href="assets/images/EBC_Plumbing.png" data-toggle="lightbox" data-title="EBC solenoid plumbing"><i className="icon fa fa-search-plus" /></a>
-                                  </div>
+                                  <ImageModal img="assets/images/EBC_Plumbing.png" title="EBC Solenoid Plumbing" />
                                 </div>
                               </div>{/*//row*/}
                               <p>The best boost source would be <strong>between</strong> the intercooler and throttle body.  It is not recommended to source boost from the intake manifold (IM) because vacuum from the IM could potential damage the wastegate or cause issues.</p>
@@ -330,10 +316,7 @@ export default class Installation extends React.Component {
                               <div className="row">
                                 <div className="col-md-3 col-sm-3 col-xs-6">
                                   <h6>Diagnostics Connector</h6>
-                                  <div className="screenshot-holder">
-                                    <a href="assets/images/tach_resistor.png" data-toggle="lightbox" data-title="Diagnostics Connector"><img className="img-responsive" src="assets/images/tach_resistor_thumb.png" alt="screenshot" /></a>
-                                    <a className="mask" href="assets/images/tach_resistor.png" data-toggle="lightbox" data-title="Diagnostics Connector"><i className="icon fa fa-search-plus" /></a>
-                                  </div>
+                                  <ImageModal img="assets/images/tach_resistor.png" title="Diagnostics Connector" />
                                 </div>
                               </div>{/*//row*/}
                             </div>{/*//section-block*/}
@@ -345,31 +328,19 @@ export default class Installation extends React.Component {
                               <div className="row">
                                 <div className="col-md-6 col-sm-6 col-xs-12">
                                   <h6>Normal MS3x Installation</h6>
-                                  <div className="screenshot-holder">
-                                    <a href="assets/images/oe_1_6L_harness.png" data-toggle="lightbox" data-title="Normal MS3x Installation"><img className="img-responsive" src="assets/images/oe_1_6L_harness.png" alt="screenshot" /></a>
-                                    <a className="mask" href="assets/images/oe_1_6L_harness.png" data-toggle="lightbox" data-title="Normal MS3x Installation"><i className="icon fa fa-search-plus" /></a>
-                                  </div>
+                                  <ImageModal img="assets/images/oe_1_6L_harness.png" title="Normal MS3x Installation" />
                                 </div>
                                 <div className="col-md-6 col-sm-6 col-xs-12">
                                   <h6>Seq. Fueling Modified MS3x Installation</h6>
-                                  <div className="screenshot-holder">
-                                    <a href="assets/images/seq_1_6L_harness.png" data-toggle="lightbox" data-title="Seq. Fueling Modified MS3x Installation"><img className="img-responsive" src="assets/images/seq_1_6L_harness.png" alt="screenshot" /></a>
-                                    <a className="mask" href="assets/images/seq_1_6L_harness.png" data-toggle="lightbox" data-title="Seq. Fueling Modified MS3x Installation"><i className="icon fa fa-search-plus" /></a>
-                                  </div>
+                                  <ImageModal img="assets/images/seq_1_6L_harness.png" title="Seq. Fueling Modified MS3x Installation" />
                                 </div>
                                 <div className="col-md-6 col-sm-6 col-xs-12">
                                   <h6>Normal DIYPNP Installation</h6>
-                                  <div className="screenshot-holder">
-                                    <a href="assets/images/oe_1_6L_harness_diypnp.png" data-toggle="lightbox" data-title="Normal DIYPNP Installation"><img className="img-responsive" src="assets/images/oe_1_6L_harness_diypnp.png" alt="screenshot" /></a>
-                                    <a className="mask" href="assets/images/oe_1_6L_harness_diypnp.png" data-toggle="lightbox" data-title="Normal DIYPNP Installation"><i className="icon fa fa-search-plus" /></a>
-                                  </div>
+                                  <ImageModal img="assets/images/oe_1_6L_harness_diypnp.png" title="Normal DIYPNP Installation" />
                                 </div>
                                 <div className="col-md-6 col-sm-6 col-xs-12">
                                   <h6>Seq. Fueling Modified DIYPNP Installation</h6>
-                                  <div className="screenshot-holder">
-                                    <a href="assets/images/seq_1_6L_harness_diypnp.png" data-toggle="lightbox" data-title="Seq. Fueling Modified DIYPNP Installation"><img className="img-responsive" src="assets/images/seq_1_6L_harness_diypnp.png" alt="screenshot" /></a>
-                                    <a className="mask" href="assets/images/seq_1_6L_harness_diypnp.png" data-toggle="lightbox" data-title="Seq. Fueling Modified DIYPNP Installation"><i className="icon fa fa-search-plus" /></a>
-                                  </div>
+                                  <ImageModal img="assets/images/seq_1_6L_harness_diypnp.png" title="Seq. Fueling Modified DIYPNP Installation" />
                                 </div>
                               </div>{/*//row*/}
                               <div className="callout-block callout-success">
@@ -394,10 +365,31 @@ export default class Installation extends React.Component {
                       </div>{/*//doc-sidebar*/}
                     </div>
 
-
-
             </div>
           </div>
+          <div id="promo-block" class="promo-block promo-block-2">
+                      <div class="container">
+                          <div class="promo-block-inner">
+                              <h3 class="promo-title text-center"><i class="fa fa-thumbs-up"></i> <a href="#">Done with the hardware installation, move onto Tuning &amp; Tips</a></h3>
+                              <div class="row">
+                                  <div class="figure-holder col-md-3 col-sm-4 col-xs-8">
+                                      <i class="fa fa-car fa-5x pull-right"></i>
+                                  </div>
+                                  <div class="content-holder col-md-9 col-sm-8 col-xs-12">
+                                      <div class="content-holder-inner">
+                                          <div class="desc">
+                                              <h4 class="content-title"><strong>Power ON</strong></h4>
+                                              <p>Once you’ve finished the external MS wiring and have connected the factory harness to the MS harness, connect your usb cable to your MS, and power up the unit (key ON). You should hear the fuel pump activate and prime.</p>
+                                              <p>Make sure the usb &gt; serial drivers install properly and your computer assigns the cable a com port.</p>
+                                              <p>If you cannot get past this stage, ask for help before continuing.</p>
+                                          </div>
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
         </div>
     );
 

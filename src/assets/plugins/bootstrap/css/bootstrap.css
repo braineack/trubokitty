@@ -5988,6 +5988,11 @@ button.close {
   .modal-lg {
     width: 900px;
   }
+  .modal-dialog {
+    width: 800px;
+    margin: 30px auto;
+  }
+
 }
 .tooltip {
   position: absolute;

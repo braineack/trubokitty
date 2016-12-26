@@ -1285,12 +1285,34 @@ select {
 .cards-section .item-purple .icon {
   color: #8A40A7;
 }
+.modal-open .modal {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 960px;
+  }
+  .modal-dialog {
+    width: 960px;
+    margin: 30px auto;
+  }
+
+}
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   .cards-section .item-inner {
     padding: 30px 15px;
   }
+  .modal-dialog {
+      width: auto;
+      margin: 30px;
+  }
+
 }
+
+
+
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
