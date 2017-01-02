@@ -11,6 +11,7 @@ import Tune from "./pages/Tune";
 import FAQs from "./pages/FAQs";
 import Resources from "./pages/Resources";
 import Comments from "./pages/Comments";
+import NotFoundPage from "./pages/NotFoundPage";
 
 
 const app = document.getElementById('app');

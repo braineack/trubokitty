@@ -1,11 +1,3 @@
-/*
- * Template Name: PrettyDocs - Responsive Website Template for documentations
- * Version: 1.0
- * Author: Xiaoying Riley
- * License: Creative Commons Attribution 3.0 License - https://creativecommons.org/licenses/by/3.0/
- * Twitter: @3rdwave_themes
- * Website: http://themes.3rdwavemedia.com/
-*/
 /* Theme default */
 /* ======= Base ======= */
 body {
@@ -643,7 +635,7 @@ select {
   display: block;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 50%;
   top: 50%;
   margin-top: -21px;
 }
@@ -1289,16 +1281,423 @@ select {
   display: block;
 }
 
+
+/* ======= CONNECTORS ======= */
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.zoom {
+  zoom: 0.82;
+  -moz-transform: scale(0.82);
+}
+
+.board-row {
+  min-width: 530px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  color: #494d55;
+  background: none;
+  border: 1px solid #999;
+  float: left;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 41px;
+}
+.label {
+  color: #494d55;
+  background: none;
+  border: 0px;
+  float: left;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 12px;
+  height: 35px;
+  margin-right: -1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 0;
+  text-align: center;
+  width: 41px;
+}
+.wire {
+  background: none;
+  border: 0px solid #999;
+  float: left;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  height: 72px;
+  margin: 0px 13px 1px 13px;
+  text-align: center;
+  width: 14px;
+  box-sizing: border-box;
+}
+
+.spacer {
+  background: none;
+  border: 0px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: 1px;
+  margin-left: 1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 3px;
+}
+
+.space {
+  background: none;
+  border: 0px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: 2px;
+  margin-left: 2px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 32px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.game-board {
+
+}
+
+/* ======= CONNECTORS COLORS ======= */
+
+
+.WR {
+  background: repeating-linear-gradient(
+    45deg,
+    #fb0000,
+    #fb0000 10px,
+    #fff 10px,
+    #fff 20px
+  );
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+}
+
+.R {
+  background: red;
+  border-left: 1px solid darkred;
+  border-right: 1px solid darkred;
+}
+
+.Y {
+  background: yellow;
+  border-left: 1px solid #fcd000;
+  border-right: 1px solid #fcd000;
+}
+
+.YO {
+  background: repeating-linear-gradient(
+    45deg,
+    #f7fd00,
+    #f7fd00 10px,
+    #f77f00 10px,
+    #f77f00 20px
+  );
+  border-left: 1px solid #f77f00;
+  border-right: 1px solid #f77f00;
+}
+
+.WV {
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 10px,
+    #d100e8 10px,
+    #d100e8 20px
+  );
+  border-left: 1px solid #d100e8;
+  border-right: 1px solid #d100e8;
+}
+
+.WB {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    #fff 10px,
+    #7895ea 10px,
+    #7895ea 20px
+  );
+  border-left: 1px solid #7895ea;
+  border-right: 1px solid #7895ea;
+}
+
+.GB {
+  background: repeating-linear-gradient(
+    45deg,
+    #c5c5c5,
+    #c5c5c5 10px,
+    #7895ea 10px,
+    #7895ea 20px
+  );
+  border-left: 1px solid #7895ea;
+  border-right: 1px solid #7895ea;
+}
+
+.GR {
+  background: repeating-linear-gradient(
+    45deg,
+    #c5c5c5,
+    #c5c5c5 10px,
+    red 10px,
+    red 20px
+  );
+  border-left: 1px solid darkred;
+  border-right: 1px solid darkred;
+}
+.G {
+  background: #c5c5c5;
+  border-left: 1px solid darkgray;
+  border-right: 1px solid darkgray;
+}
+.GV {
+  background: repeating-linear-gradient(
+    45deg,
+    #c5c5c5,
+    #c5c5c5 10px,
+    purple 10px,
+    purple 20px
+  );
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.OR {
+  background: repeating-linear-gradient(
+    45deg,
+    #f77f00,
+    #f77f00 10px,
+    red 10px,
+    red 20px
+  );
+  border-left: 1px solid darkred;
+  border-right: 1px solid darkred;
+}
+
+.B {
+  background: #000;
+  border-left: 1px solid darkgray;
+  border-right: 1px solid darkgray;
+}
+
+.BW {
+  background: repeating-linear-gradient(
+    45deg,
+    #000,
+    #000 10px,
+    #fff 10px,
+    #fff 20px
+  );
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+
+.GRN {
+  background: green;
+  border-left: 1px solid darkgreen;
+  border-right: 1px solid darkgreen;
+}
+.LTGRN {
+  background: lightgreen;
+  border-left: 1px solid green;
+  border-right: 1px solid green;
+}
+.GO {
+  background: repeating-linear-gradient(
+    45deg,
+    #f77f00,
+    #f77f00 10px,
+    lightgreen 10px,
+    lightgreen 20px
+  );
+  border-left: 1px solid green;
+  border-right: 1px solid green;
+}
+.GP {
+  background: repeating-linear-gradient(
+    45deg,
+    pink,
+    pink 10px,
+    lightgreen 10px,
+    lightgreen 20px
+  );
+  border-left: 1px solid green;
+  border-right: 1px solid green;
+}
+
+.BL {
+  background: #2a7de6;
+  border-left: 1px solid darkblue;
+  border-right: 1px solid darkblue;
+}
+
+.GRNR {
+  background: repeating-linear-gradient(
+    45deg,
+    red,
+    red 10px,
+    lightgreen 10px,
+    lightgreen 20px
+  );
+  border-left: 1px solid green;
+  border-right: 1px solid green;
+}
+
+.P {
+  background: pink;
+  border-left: 1px solid plum;
+  border-right: 1px solid plum;
+}
+.O {
+  background: orange;
+  border-left: 1px solid darkred;
+  border-right: 1px solid darkred;
+}
+.W {
+  background: #fff;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.WG {
+  background: repeating-linear-gradient(
+    45deg,
+    green,
+    green 10px,
+    #fff 10px,
+    #fff 20px
+  );
+  border-left: 1px solid green;
+  border-right: 1px solid green;
+}
+.WO {
+  background: repeating-linear-gradient(
+    45deg,
+    #f77f00,
+    #f77f00 10px,
+    #fff 10px,
+    #fff 20px
+  );
+  border-left: 1px solid #f77f00;
+  border-right: 1px solid #f77f00;
+}
+.WLTGRN {
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 10px,
+    lightgreen 10px,
+    lightgreen 20px
+  );
+  border-left: 1px solid lightgreen;
+  border-right: 1px solid lightgreen;
+}
+.LTGRNB {
+  background: repeating-linear-gradient(
+    45deg,
+    blue,
+    blue 10px,
+    lightgreen 10px,
+    lightgreen 20px
+  );
+  border-left: 1px solid blue;
+  border-right: 1px solid blue;
+}
+.LTGRNGRN {
+  background: repeating-linear-gradient(
+    45deg,
+    darkgreen,
+    darkgreen 10px,
+    lightgreen 10px,
+    lightgreen 20px
+  );
+  border-left: 1px solid darkgreen;
+  border-right: 1px solid darkgreen;
+}
+.WP {
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 10px,
+    pink 10px,
+    pink 20px
+  );
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+}
+.V {
+  background: purple;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.hidden { display:none; }
+
+
+
 @media (min-width: 992px) {
   .modal-lg {
-    width: 960px;
+    width: 900px;
   }
   .modal-dialog {
-    width: 960px;
+    width: 900px;
     margin: 30px auto;
   }
 
 }
+/* narrow devices (phones, less than 1200px) */
+@media (max-width: 1199px) {
+  .zoom {
+    zoom: 1;
+    -moz-transform: scale(1);
+  }
+}
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   .cards-section .item-inner {
@@ -1307,6 +1706,10 @@ select {
   .modal-dialog {
       width: auto;
       margin: 30px;
+  }
+  .zoom {
+    zoom: 1;
+    -moz-transform: scale(1);
   }
 
 }
