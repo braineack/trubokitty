@@ -12,6 +12,7 @@ export default class Connector9900 extends React.Component {
   renderSquare(i) {
     return <Square value={diagram[i]["id"]}
                    wirecolor={diagram[i]["wirecolor"]}
+                   {...diagram[i]}
                    />;
   }
   renderTopSquare(i) {
@@ -31,7 +32,7 @@ export default class Connector9900 extends React.Component {
         <div>
         <h1>99-00 MS3x Wiring Diagram</h1>
         <div class="row">
-          <div class="col-lg-5 zoom">
+          <div class="col-lg-6 topPad">
             <div className="board-row">
               {this.renderLabelSquare(0)}
               {this.renderLabelSquare(2)}
@@ -123,7 +124,7 @@ export default class Connector9900 extends React.Component {
               {this.renderLabelSquare(21)}
             </div>
           </div>
-          <div class="col-lg-4 zoom">
+          <div class="col-lg-5 topPad">
             <div className="board-row">
               {this.renderLabelSquare(22)}
               {this.renderLabelSquare(24)}
@@ -185,7 +186,7 @@ export default class Connector9900 extends React.Component {
               {this.renderLabelSquare(37)}
             </div>
           </div>
-          <div class="col-lg-6 zoom">
+          <div class="col-lg-8 topPad">
             <div className="board-row">
               {this.renderLabelSquare(38)}
               {this.renderLabelSquare(40)}

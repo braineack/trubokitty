@@ -19,7 +19,7 @@ export default class Ms3x extends React.Component {
   render() {
     const AffixNav = (
       <AutoAffix viewportOffsetTop={20} container={this}>
-        <Scrollspy items={ ['shopping', 'tools', 'assembly', 'nuances'] } currentClassName="active" id="doc-menu" className="nav doc-menu hidden-xs">
+        <Scrollspy items={ ['shopping', 'tools', 'assembly', 'nuances'] } currentClassName="active" id="doc-menu" className="nav doc-menu hidden-sm hidden-xs">
             <li><Scrollchor to="#shopping">Shopping List</Scrollchor></li>
             <li><Scrollchor to="#tools">Required Tools</Scrollchor></li>
             <li><Scrollchor to="#assembly">Main PCB Assembly</Scrollchor>
@@ -34,8 +34,10 @@ export default class Ms3x extends React.Component {
               </Scrollspy>
             </li>
             <li><Scrollchor to="#harness">Patch Harness Assembly</Scrollchor>
-              <Scrollspy items={ ['', '', ''] } currentClassName="active" className="nav doc-sub-menu">
-
+              <Scrollspy items={ ['db37', 'ecu_connector', 'wiring'] } currentClassName="active" className="nav doc-sub-menu">
+                <li><Scrollchor to="#db37">DB37 Connectors</Scrollchor></li>
+                <li><Scrollchor to="#ecu_connector">ECU Connector</Scrollchor></li>
+                <li><Scrollchor to="#wiring">Wiring Diagrams</Scrollchor></li>
               </Scrollspy>
             </li>
         </Scrollspy>
@@ -47,6 +49,8 @@ export default class Ms3x extends React.Component {
       return info.link === id;
     })[0];
     var bodyColor = 'body-' + info.color;
+    var siteName = 'truboKitty.com -- '
+    document.title = siteName + info.title;
     return (
         <div class={bodyColor}>
           <HeaderPage title={info.title} class={info.color} />
@@ -55,7 +59,7 @@ export default class Ms3x extends React.Component {
               <div id="doc-header" class="doc-header text-center">
                 <h1 class="doc-title"><span aria-hidden="true" class={info.icon}></span> {info.title}</h1>
                 <div class="meta"><i class="fa fa-clock-o"></i>
-                 &nbsp; Last updated: Jan 2nd, 2017
+                 &nbsp; Last updated: Jan 8th, 2017
                 </div>
               </div>
               <div className="doc-body">
@@ -94,7 +98,7 @@ export default class Ms3x extends React.Component {
                             <p>For loading firmware and bench testing your ECU, it is recommended that you also purchase the <strong>JimStim v1.5 MegaSquirt Stimulator with Wheel Simulator – Unassembled</strong>.</p>
                             <p>96+ Miatas are equipped with an OE knock sensor that the MS3x can utilize, this would also be your opportunity to purchase the addtional <strong>MS3 Knock Module Kit</strong>.</p>
                           </div>{/*//content*/}
-                        </div>
+                        </div>{/*//callout-block*/}
                       </div>{/*//section-block*/}
                     </section>{/*//doc-section*/}
 
@@ -102,7 +106,7 @@ export default class Ms3x extends React.Component {
                       <h2 className="section-title">Required Tools</h2>
                       <div className="section-block">
                         <div className="row">
-                          <div className="col-md-6 col-sm-6 col-xs-12">
+                          <div className="col-md-12 col-sm-12 col-xs-12">
                             <ul>
                               <li>Soldering Iron with a fine tip</li>
                               <li>Solder (Resin-Core 60/40 .030{'"'})</li>
@@ -116,9 +120,6 @@ export default class Ms3x extends React.Component {
                               <li>Hot Glue Gun (for harness)</li>
                               <li>Zipties or wire loom (for harness)</li>
                             </ul>
-                          </div>
-                          <div className="col-md-6 col-sm-6 col-xs-12">
-
                           </div>
                         </div>
                         <br />
@@ -139,7 +140,7 @@ export default class Ms3x extends React.Component {
                       <h2 className="section-title">Main Printed Circuit Board (PCB) Assembly</h2>
                       <div className="section-block">
                           <p>Not everything provided in the MegaSquirt-III Unassembled Kit is required to be populated in order to run the MS on your miata.  The MS3 kit is able to run all sorts of different makes/models/configurations&mdash;you can chose to install it all, or just install what I reccomend below.  I personally install the least amount of components required; this will save time and wasted effort.</p>
-                          <p>With that being said, only a very few {'"'}modifications{'"'} must be made after assembly in order to configure the MS3 to work with the miata sensors.  All 90-95 model year MS3x units will be built the same way, with the exception only being the addtion of a few extra {'"'}mods{'"'} to handle the unquie requirements of NBs.</p>
+                          <p>With that being said, only a very few {'"'}modifications{'"'} must be made after assembly in order to configure the MS3 to work with the miata sensors.  All 90-95 model year MS3x units will be built the same way, with the exception only being the addtion of a few extra {'"'}mods{'"'} to handle the unqiue requirements of NBs.</p>
                       </div>{/*//section-block*/}
                       <div id="pcb" className="section-block">
                         <h3 className="block-title">Populating the PCB</h3>
@@ -245,12 +246,125 @@ export default class Ms3x extends React.Component {
                     <section id="harness" className="doc-section">
                       <h2 className="section-title">Patch Harness Assembly</h2>
                       <div className="section-block">
+                        <p>There are various ways to connect your newly assembled MS3x to your miata. The method I like to employ is the Plug & Play (PnP) Patch Harness.  Building this harness will allow you to plug the MS3x unit directly into the OE ECU Harness. This method uses a spare ECU connector that you solder the two DB37 connectors to via the two wire looms noted in the shopping list. 90-95 installations can utilize the option 16-pin connector in the Shopping List to put any additioanl inputs and outputs.</p>
+                        <br />
+                        <div className="callout-block callout-success">
+                          <div className="icon-holder">
+                            <i className="fa fa-money" />
+                          </div>{/*//icon-holder*/}
+                          <div className="content">
+                            <h4 className="callout-title">Useful Tip:</h4>
+                            <p>If you prefer not to cut and solder directly onto the ECU Connector, the <a href="https://www.diyautotune.com/product/diybob-breakout-adapter-nippondenso-76-pin/" target="_blank">DIYBOB</a> was developed exactly for this type of harness.  It's a bit of a splurge, but it's easier to populate, looks cleaner, and much easier to make changes on.</p>
+                            <p>It includes the ECU connector, and is available for all model year miatas 90-05 (NB2 use the <a href="https://www.diyautotune.com/product/diypnp-nippon-denso-122pin-unassembled-kit/" target="_blank">N122 kit</a>).  This allows you to source everything you need from one vendor.</p>
+                          </div>{/*//content*/}
+                        </div>{/*//callout-block*/}
+                      </div>{/*//section-block*/}
 
+                      <div id="db37" className="section-block">
+                        <h3 className="block-title">DB37 Connectors</h3>
+                        <div className="row">
+                          <div className="col-md-6 col-sm-12 col-xs-12">
+                            <h6>Mainboard DB37</h6>
+                            <p>Populate the Mainboard DB37 following the diagram below.</p>
+                            <ImageModal img="assets/images/ms3x_db37.jpg" title="Mainboard DB37" caption="" />
+                            <ImageModal img="assets/images/ms3x_db37_soldered.jpg" title="Mainboard DB37 Soldered" caption="" />
+                          </div>
+                          <div className="col-md-6 col-sm-12 col-xs-12">
+                            <h6>Expander DB37</h6>
+                            <p>Populate the Expander Board DB37 following the diagram below. I only populate the wires I plan on using, you can use the model-year wiring diagrams in the next section to determine these.</p>
+                            <ImageModal img="assets/images/ms3x_expander.png" title="Expander Board DB37" caption="" />
+                            <ImageModal img="assets/images/ms3x_expander_soldered.jpg" title="Expander DB37 Soldered" caption="Note: Only the nessecary wires were soldered onto the DB37&mdash;this saves time/effort and keeps the harness free of loose, unused wires." />
+                          </div>
+                        </div>
+                        <br />
+                        <div className="callout-block callout-info">
+                          <div className="icon-holder">
+                            <i className="fa fa-info-circle" />
+                          </div>{/*//icon-holder*/}
+                          <div className="content">
+                            <h4 className="callout-title">Pro-tip-of-the-day:</h4>
+                            <p>Position the wires in the DB37 when soldering, so the natural curl of the wires all go the same direction.  Take note the orentation of the connector itself between both connectors.  Taking a moment and doing this here when lead to a cleaner harness in the end.</p>
+                          </div>{/*//content*/}
+                        </div>{/*//callout-block*/}
+                      </div>{/*//section-block*/}
+
+                      <div id="ecu_connector" className="section-block">
+                        <h3 className="block-title">ECU Connector</h3>
+                        <div className="content">
+                          <p>If you are using a DIYBOB to build your harness, you can skip these steps and simply the wiring diagrams in the next section to build your harness.</p>
+                        </div>
+                        <div className="row">
+                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                            <h6>Step One</h6>
+                            <p>Acquire an OEM ECU Harness connector.</p>
+                            <ImageModal img="assets/images/ecu_connector.jpg" title="OEM ECU Harness connector" caption="" />
+                          </div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                            <h6>Step Two</h6>
+                            <p>Cut off the top pins so they are about 1/4{'"'} long (right at the bend).</p>
+                            <ImageModal img="assets/images/ecu_connector_topcut.jpg" title="OEM ECU Harness connector" caption="" />
+                          </div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                            <h6>Step Three</h6>
+                            <p>Bend up the lower row so they are flat (try to actually fold them back straight).</p>
+                            <ImageModal img="assets/images/ecu_connector_bottomstraight.jpg" title="OEM ECU Harness connector" caption="" />
+                          </div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                            <h6>Step Four</h6>
+                            <p>Cut the lower pins flush to the top row.</p>
+                            <ImageModal img="assets/images/ecu_connector_bottomcut.jpg" title="OEM ECU Harness connector" caption="" />
+                          </div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                            <h6>Step Five</h6>
+                            <p>Put a length of heatshrink on each of your wires and then pre-tin the wires and pins before you solder to the connector.</p>
+                            <ImageModal img="assets/images/ecu_connector_firstwire.jpg" title="OEM ECU Harness connector" caption="" />
+                          </div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                            <h6>Step Six</h6>
+                            <p>Start by soldering the Mainboard DB37 wires (work left to right, lower-rows to top-rows).</p>
+                            <ImageModal img="assets/images/ecu_connector_msdb37.jpg" title="OEM ECU Harness connector" caption="" />
+                          </div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                            <h6>Step Seven</h6>
+                            <p>Orient the connectors and follow up with MS3 Expander wires.</p>
+                            <ImageModal img="assets/images/ecu_connector_expander.jpg" title="OEM ECU Harness connector" caption="" />
+                          </div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                            <h6>Step Eight</h6>
+                            <p>Once complete, melt the heatshrink so you ensure no wires will make a connection.</p>
+                            <ImageModal img="assets/images/ecu_connector_heatshrink.jpg" title="OEM ECU Harness connector" caption="" />
+                          </div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                            <h6>Step Nine</h6>
+                            <p>Follow up with hot-glue so the wires stay secure and are less prone to vibration & stress.</p>
+                            <ImageModal img="assets/images/ecu_connector_glue.jpg" title="OEM ECU Harness connector" caption="" />
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-md-8 col-sm-8 col-xs-12">
+                            <h6>Complete</h6>
+                              <p>Finish this off with split-loom for the professional look. </p>
+                            <ImageModal img="assets/images/ecu_connector_complete.jpg" title="OEM ECU Harness connector" caption="" />
+                          </div>
+                        </div>
+                        <br />
+                        <div className="callout-block callout-info">
+                          <div className="icon-holder">
+                            <i className="fa fa-info-circle" />
+                          </div>{/*//icon-holder*/}
+                          <div className="content">
+                            <h4 className="callout-title">Pro-tip-of-the-day:</h4>
+                            <p>You will notice the unpopulated center connector in the images above.  90-95 can utilize those pins along with the 16-pin pigtail mentioned in the Shopping List to put any extra inputs/outputs on.  This way if you ever need to unplug the harness, all you need to do is unplug the center connector and not cut wires, or use cheap radio shack connectors to splice into your nice new harness.</p>
+                          </div>{/*//content*/}
+                        </div>{/*//callout-block*/}
+                      </div>{/*//section-block*/}
+
+                      <div id="wiring" className="section-block">
+                        <h3 className="block-title">Wiring Diagrams</h3>
                         <ConnectorBoard />
 
                       </div>{/*//section-block*/}
                     </section>{/*//doc-section*/}
-
 
                   </div>{/*//content-inner*/}
                 </div>{/*//doc-content*/}

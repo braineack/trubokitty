@@ -5,6 +5,7 @@ import Square from "./Square";
 import Spacer from "./Spacer";
 import Wire from "./wire";
 import Label from "./Label";
+import Table9093 from "./Table9093";
 
 const diagram = Diagram9093.getAll();
 
@@ -12,6 +13,7 @@ export default class Connector9093 extends React.Component {
   renderSquare(i) {
     return <Square value={diagram[i]["id"]}
                    wirecolor={diagram[i]["wirecolor"]}
+                   {...diagram[i]}
                    />;
   }
   renderTopSquare(i) {
@@ -31,7 +33,7 @@ export default class Connector9093 extends React.Component {
         <div>
         <h1>90-93 MS3x Wiring Diagram</h1>
         <div class="row">
-          <div class="col-lg-5 zoom">
+          <div class="col-lg-5 zoom topPad">
             <div className="board-row">
               {this.renderLabelSquare(0)}
               {this.renderLabelSquare(2)}
@@ -123,7 +125,7 @@ export default class Connector9093 extends React.Component {
               {this.renderLabelSquare(21)}
             </div>
           </div>
-          <div class="col-lg-6 zoom">
+          <div class="col-lg-6 zoom topPad">
             <div className="board-row">
               {this.renderLabelSquare(22)}
               {this.renderLabelSquare(24)}
@@ -228,6 +230,7 @@ export default class Connector9093 extends React.Component {
             </div>
           </div>
         </div>
+        <Table9093 />
         </div>
 
       );

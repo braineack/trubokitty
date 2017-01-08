@@ -1066,7 +1066,7 @@ select {
   color: #fff !important;
 }
 /* Extra small devices (phones, less than 768px) */
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .doc-content {
     margin-left: 0;
   }
@@ -1288,6 +1288,10 @@ ol, ul {
   padding-left: 30px;
 }
 
+.topPad {
+  padding-top: 20px;
+}
+
 .zoom {
   zoom: 0.82;
   -moz-transform: scale(0.82);
@@ -1322,6 +1326,49 @@ ol, ul {
   text-align: center;
   width: 41px;
 }
+
+.squaret {
+  color: #494d55;
+  background: none;
+  border: 1px solid #999;
+  float: left;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 49.95px;
+}
+
+.blank {
+  background: none;
+  border: 0px solid #999;
+  float: left;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 41px;
+}
+
+.blankt {
+  background: none;
+  border: 0px;
+  float: left;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  width: 19px;
+}
+
 .label {
   color: #494d55;
   background: none;
@@ -1338,6 +1385,23 @@ ol, ul {
   text-align: center;
   width: 41px;
 }
+
+.labelt {
+  color: #494d55;
+  background: none;
+  border: 0px;
+  float: left;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 12px;
+  height: 35px;
+  margin-right: -1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 0;
+  text-align: center;
+  width: 49.95px;
+}
 .wire {
   background: none;
   border: 0px solid #999;
@@ -1347,6 +1411,20 @@ ol, ul {
   line-height: 14px;
   height: 72px;
   margin: 0px 13px 1px 13px;
+  text-align: center;
+  width: 14px;
+  box-sizing: border-box;
+}
+
+.wiret {
+  background: none;
+  border: 0px solid #999;
+  float: left;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  height: 72px;
+  margin: 0px 17.55px 1px 17.55px;
   text-align: center;
   width: 14px;
   box-sizing: border-box;
@@ -1382,6 +1460,18 @@ ol, ul {
   padding: 0;
   text-align: center;
   width: 32px;
+}
+
+.filled {
+  background: #d8e6f8;
+}
+
+.WTXT {
+  color: #fff;
+}
+
+.BTXT {
+  color: #000;
 }
 
 .square:focus {
@@ -1678,7 +1768,9 @@ ol, ul {
 
 .hidden { display:none; }
 
-
+.col-height {
+  height: 310px;
+}
 
 @media (min-width: 992px) {
   .modal-lg {
@@ -1688,13 +1780,22 @@ ol, ul {
     width: 900px;
     margin: 30px auto;
   }
-
 }
+
 /* narrow devices (phones, less than 1200px) */
 @media (max-width: 1199px) {
   .zoom {
     zoom: 1;
     -moz-transform: scale(1);
+  }
+  .col-height {
+    height: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-height {
+    height: 350px;
   }
 }
 
@@ -1711,10 +1812,7 @@ ol, ul {
     zoom: 1;
     -moz-transform: scale(1);
   }
-
 }
-
-
 
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
