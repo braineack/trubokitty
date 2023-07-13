@@ -1,33 +1,35 @@
 import React from "react";
 import HeaderPage from "../components/HeaderPage";
-import ArticlesStore from "../stores/ArticlesStore";
+import { Link } from "react-router";
 
 export default class Comments extends React.Component {
   constructor() {
     super();
     this.state = {
-      pages: ArticlesStore.getAll(),
+      title: "404",
+      icon: "fa fa-eye-slash icon",
+      color: "pink"
     };
   }
   render() {
     const { pages } = this.state;
     var id = this.props.route.path;
-    var info = pages.filter(function ( info ) {
-      return info.link === id;
-    })[0];
-    var bodyColor = 'body-' + info.color;
+    var bodyColor = 'body-pink';
     return (
         <div class={bodyColor}>
-          <HeaderPage title={info.title} class={info.color} />
+          <HeaderPage title={this.state.title} class={this.state.color} />
           <div class="doc-wrapper">
             <div class="container">
               <div id="doc-header" class="doc-header text-center">
-                <h1 class="doc-title"><span aria-hidden="true" class={info.icon}></span> {info.title}</h1>
-                <div class="meta"><i class="fa fa-clock-o"></i>
-                 &nbsp; Last updated: Dec 28th, 2016
-                </div>
+                <h1 class="doc-title"><span aria-hidden="true" class={this.state.icon}></span> {this.state.title}</h1>
                 <div className="not-found">
-                <h1>404</h1>
+                <div className="screenshot-holder">
+                  <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                      <Link to="/"><img className="img-responsive thumbnail" src="assets/images/404.jpg" alt="Lost Cat" /></Link>
+                    </div>
+                  </div>
+                </div>
                 <p>
                 <Link to="/">Go Back to the main page</Link>
                 </p>

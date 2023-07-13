@@ -3,7 +3,7 @@ import React from "react";
 export default class Articles extends React.Component {
   render() {
     var color = this.props.color;
-    var styles = 'item col-md-4 col-sm-6 col-xs-6 item-' + color;
+    var styles = 'item item-' + color;
     const containerHeight = {
       height: "275px"
     };

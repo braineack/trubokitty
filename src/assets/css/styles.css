@@ -24,18 +24,37 @@ body {
 .footer {
   height: 50px;
 }
+li:first-of-type {
+    padding-top: inherit;
+}
+li {
+    padding-top: 5px;
+}
 p {
   line-height: 1.5;
 }
+
+
+.links-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  justify-content: center;
+}
+.qr {
+  max-width: 270px;
+}
+
 a {
   color: #3aa7aa;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
+  text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #339597;
 }
 a:focus {
@@ -608,6 +627,9 @@ select {
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f5f5f5;
 }
+li > .table-responsive > table {
+      margin-bottom: 0px;
+}
 .screenshot-holder {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -876,6 +898,7 @@ select {
 .doc-sub-menu > li {
   margin-bottom: 10px;
   font-size: 12px;
+  width: 100%;
 }
 .doc-sub-menu > li:first-child {
   padding-top: 5px;
@@ -1172,7 +1195,8 @@ select {
   margin-right: auto;
 }
 .cards-section .item {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  max-width: 270px;
 }
 .cards-section .item .icon-holder {
   margin-bottom: 15px;
@@ -1313,7 +1337,7 @@ ol, ul {
 
 .square {
   color: #494d55;
-  background: none;
+  background: #fff;
   border: 1px solid #999;
   float: left;
   font-size: 10px;
@@ -1329,7 +1353,7 @@ ol, ul {
 
 .squaret {
   color: #494d55;
-  background: none;
+  background: #fff;
   border: 1px solid #999;
   float: left;
   font-size: 10px;

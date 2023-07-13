@@ -59,7 +59,7 @@ export default class Ms3x extends React.Component {
               <div id="doc-header" class="doc-header text-center">
                 <h1 class="doc-title"><span aria-hidden="true" class={info.icon}></span> {info.title}</h1>
                 <div class="meta"><i class="fa fa-clock-o"></i>
-                 &nbsp; Last updated: Jan 8th, 2017
+                 &nbsp; Last updated: July 20th, 2017
                 </div>
               </div>
               <div className="doc-body">
@@ -151,7 +151,9 @@ export default class Ms3x extends React.Component {
                           </div>
                         </div>
                         <p>You will note two red circles on the image above: one over <code>R52</code> and the other over <code>R13</code>.</p>
-                        <p>These are two of the modifications to the board mentioned eariler&mdash;courtesy of Frank Devocht&mdash;to make simplify the build process.  Replacing <strong>U7</strong> with the unused 100K resistor from <strong>R22</strong> prevents having to install and tune the variable resistor -- especially since we tune it to stay at 100K.  Installing a 1K resistor from the left position of <strong>R13</strong> to the right position of <strong>R45</strong> adds the 5v pullup nessecary for the crank sensor.</p>
+                        <p>These are two of the modifications to the board mentioned eariler&mdash;courtesy of Frank Devocht&mdash;to make simplify the build process.</p>
+                        <p>Replacing <strong>R52</strong> with the unused 100K resistor from <strong>R22</strong> prevents having to install and tune the variable resistor -- especially since we tune it to stay at 100K. So instead, I use a spare 100K ohm resistor, R22, and install it in the R52 position (outer two holes).</p>
+                        <p>Installing a 1K resistor from the left position of <strong>R13</strong> to the right position of <strong>R45</strong> adds the 5v pullup nessecary for the crank sensor.  You can use the unused R19 resistor for this.</p>
                         <p>Besides those two mods, install the rest of the components as normal.</p>
                       </div>{/*//section-block*/}
 
@@ -294,47 +296,53 @@ export default class Ms3x extends React.Component {
                           <p>If you are using a DIYBOB to build your harness, you can skip these steps and simply the wiring diagrams in the next section to build your harness.</p>
                         </div>
                         <div className="row">
-                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                          <div className="col-md-4 col-sm-6 col-xs-6 ">
                             <h6>Step One</h6>
                             <p>Acquire an OEM ECU Harness connector.</p>
                             <ImageModal img="assets/images/ecu_connector.jpg" title="OEM ECU Harness connector" caption="" />
                           </div>
-                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                          <div className="col-md-4 col-sm-6 col-xs-6 ">
                             <h6>Step Two</h6>
                             <p>Cut off the top pins so they are about 1/4{'"'} long (right at the bend).</p>
                             <ImageModal img="assets/images/ecu_connector_topcut.jpg" title="OEM ECU Harness connector" caption="" />
                           </div>
-                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                          <div class="clearfix visible-xs visible-sm"></div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 ">
                             <h6>Step Three</h6>
                             <p>Bend up the lower row so they are flat (try to actually fold them back straight).</p>
                             <ImageModal img="assets/images/ecu_connector_bottomstraight.jpg" title="OEM ECU Harness connector" caption="" />
                           </div>
-                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                          <div class="clearfix visible-md visible-lg visible-lg"></div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 ">
                             <h6>Step Four</h6>
                             <p>Cut the lower pins flush to the top row.</p>
                             <ImageModal img="assets/images/ecu_connector_bottomcut.jpg" title="OEM ECU Harness connector" caption="" />
                           </div>
-                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                          <div class="clearfix visible-xs visible-sm"></div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 ">
                             <h6>Step Five</h6>
                             <p>Put a length of heatshrink on each of your wires and then pre-tin the wires and pins before you solder to the connector.</p>
                             <ImageModal img="assets/images/ecu_connector_firstwire.jpg" title="OEM ECU Harness connector" caption="" />
                           </div>
-                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                          <div className="col-md-4 col-sm-6 col-xs-6 ">
                             <h6>Step Six</h6>
                             <p>Start by soldering the Mainboard DB37 wires (work left to right, lower-rows to top-rows).</p>
                             <ImageModal img="assets/images/ecu_connector_msdb37.jpg" title="OEM ECU Harness connector" caption="" />
                           </div>
-                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                          <div class="clearfix visible-md visible-lg"></div>
+                          <div class="clearfix visible-xs visible-sm"></div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 ">
                             <h6>Step Seven</h6>
                             <p>Orient the connectors and follow up with MS3 Expander wires.</p>
                             <ImageModal img="assets/images/ecu_connector_expander.jpg" title="OEM ECU Harness connector" caption="" />
                           </div>
-                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                          <div className="col-md-4 col-sm-6 col-xs-6 ">
                             <h6>Step Eight</h6>
                             <p>Once complete, melt the heatshrink so you ensure no wires will make a connection.</p>
                             <ImageModal img="assets/images/ecu_connector_heatshrink.jpg" title="OEM ECU Harness connector" caption="" />
                           </div>
-                          <div className="col-md-4 col-sm-6 col-xs-6 col-height">
+                          <div class="clearfix visible-xs visible-sm"></div>
+                          <div className="col-md-4 col-sm-6 col-xs-6 ">
                             <h6>Step Nine</h6>
                             <p>Follow up with hot-glue so the wires stay secure and are less prone to vibration & stress.</p>
                             <ImageModal img="assets/images/ecu_connector_glue.jpg" title="OEM ECU Harness connector" caption="" />
@@ -362,8 +370,8 @@ export default class Ms3x extends React.Component {
                       <div id="wiring" className="section-block">
                         <h3 className="block-title">Wiring Diagrams</h3>
                         <ConnectorBoard />
-
                       </div>{/*//section-block*/}
+
                     </section>{/*//doc-section*/}
 
                   </div>{/*//content-inner*/}

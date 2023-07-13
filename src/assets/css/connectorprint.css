@@ -1,0 +1,52 @@
+@media print {
+  @page {
+    size: 8.5in 11in;
+    margin: .25in;
+  }
+  table {
+    zoom: 0.68;
+  }
+  .buttons-row {
+    display: none !important;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .topPad {
+    padding: 0px;
+  }
+  .zoom {
+    page-break-inside: avoid;
+  }
+  .row {
+        width: 8.0in;
+        margin: 0px;
+        page-break-after: always;
+  }
+  .c1 {
+      width: 485px;
+      float: left;
+      zoom: .8;
+  }
+  .c3 {
+      width: 355px;
+      float: left;
+      zoom: .8;
+  }
+  .c4 {
+      clear: both;
+  }
+  .cnb2 {
+      width: 295px;
+      float: left;
+      zoom: .9;
+  }
+  .cnb3 {
+      width: 485px;
+      float: left;
+      zoom: .9;
+  }
+  .cnb4 {
+      clear: both;
+  }
+}

@@ -39,30 +39,30 @@ class ArticlesStore extends EventEmitter {
         color: "blue",
         icon: "fa fa-wrench icon"
       },
-      {
-        id: 5,
-        link: "faqs",
-        title: "FAQs",
-        text: "Frequently Asked Questions and some answers to them",
-        color: "purple",
-        icon: "icon_lifesaver icon"
-      },
-      {
-        id: 6,
-        link: "resources",
-        title: "Addtional Resources",
-        text: "A collection of additional resources to help you with your assembly",
-        color: "primary",
-        icon: "fa fa-rebel icon"
-      },
-      {
-        id: 7,
-        link: "comments",
-        title: "Comments & Contact",
-        text: "Leave comments or questions; get answers",
-        color: "orange",
-        icon: "fa fa-commenting icon"
-      },
+      // {
+      //   id: 5,
+      //   link: "faqs",
+      //   title: "FAQs",
+      //   text: "Frequently Asked Questions and some answers to them",
+      //   color: "purple",
+      //   icon: "icon_lifesaver icon"
+      // },
+      // {
+      //   id: 6,
+      //   link: "resources",
+      //   title: "Addtional Resources",
+      //   text: "A collection of additional resources to help you with your assembly",
+      //   color: "primary",
+      //   icon: "fa fa-rebel icon"
+      // },
+      // {
+      //   id: 7,
+      //   link: "comments",
+      //   title: "Comments & Contact",
+      //   text: "Leave comments or questions; get answers",
+      //   color: "orange",
+      //   icon: "fa fa-commenting icon"
+      // },
     ];
   }
 

@@ -1,10 +1,10 @@
 import React from "react";
+import HeaderPage from "../components/HeaderPage";
+import ArticlesStore from "../stores/ArticlesStore";
+import ConnectorBoard from "../components/ConnectorBoard";
 import { Scrollspy } from 'react-scrollspy';
 import AutoAffix from 'react-overlays/lib/AutoAffix';
 import Scrollchor from "react-scrollchor";
-
-import HeaderPage from "../components/HeaderPage";
-import ArticlesStore from "../stores/ArticlesStore";
 import ImageModal from "../components/Modal";
 
 export default class Installation extends React.Component {
@@ -16,7 +16,7 @@ export default class Installation extends React.Component {
   }
   render() {
     const AffixNav = (
-      <AutoAffix viewportOffsetTop={20} container={this}>
+      <div viewportOffsetTop={20} container={this}>
         <Scrollspy items={ ['components', 'connecting-ms', 'wiring-peripherals', 'nuances'] } currentClassName="active" id="doc-menu" className="nav doc-menu hidden-xs">
             <li><Scrollchor to="#components">Required Tools</Scrollchor></li>
             <li><Scrollchor to="#connecting-ms">Connecting the Megasquirt</Scrollchor></li>
@@ -30,14 +30,13 @@ export default class Installation extends React.Component {
               </Scrollspy>
             </li>
             <li><Scrollchor to="#nuances">Nuances</Scrollchor>
-              <Scrollspy items={ ['tps', 'tach', 'seq'] } currentClassName="active" className="nav doc-sub-menu">
+              <Scrollspy items={ ['tps', 'tach',] } currentClassName="active" className="nav doc-sub-menu">
                 <li><Scrollchor to="#tps">90-93 TPS</Scrollchor></li>
                 <li><Scrollchor to="#tach">90-95 Tach Signal</Scrollchor></li>
-                <li><Scrollchor to="#seq">90-93 Sequential Fueling</Scrollchor></li>
               </Scrollspy>
             </li>
         </Scrollspy>
-        </AutoAffix>
+        </div>
     );
     const { pages } = this.state;
     var id = this.props.route.path;
@@ -320,41 +319,7 @@ export default class Installation extends React.Component {
                                 </div>
                               </div>{/*//row*/}
                             </div>{/*//section-block*/}
-                            <div id="seq" className="section-block">
-                              <h3 className="block-title">90-93 Sequential Fueling</h3>
-                              <p>The 90-93 1.6L Fuel Injector Harness is wired in batches: Injectors (1 &amp; 3) are paired and Injectors (2 &amp; 4) are paired together respectively. </p>
-                              <p>Your MS3x supports sequential fueling, however, your 1.6L injector harness needs to be modified in order to run it. This will allow you to drive each injector individually instead of firing two at a time.  This upgrade increases mpg efficiency, increases power output, and allows easier control of larger sized injectors.</p>
-                              <p>To perform this upgrade, you will need to modify your injector harness as seen below to remove the batched pairings and run an output to each individual injector.  Two new wires from INJ C and INJ D from the harness must be run into the engine bay (from your I/O Pigtail) and two wires on the DB37 must be swapped around to ensure the correct outputs go to the correct cylinder.</p>
-                              <div className="row">
-                                <div className="col-md-6 col-sm-6 col-xs-12">
-                                  <h6>Normal MS3x Installation</h6>
-                                  <ImageModal img="assets/images/oe_1_6L_harness.png" title="Normal MS3x Installation" />
-                                </div>
-                                <div className="col-md-6 col-sm-6 col-xs-12">
-                                  <h6>Seq. Fueling Modified MS3x Installation</h6>
-                                  <ImageModal img="assets/images/seq_1_6L_harness.png" title="Seq. Fueling Modified MS3x Installation" />
-                                </div>
-                                <div className="col-md-6 col-sm-6 col-xs-12">
-                                  <h6>Normal DIYPNP Installation</h6>
-                                  <ImageModal img="assets/images/oe_1_6L_harness_diypnp.png" title="Normal DIYPNP Installation" />
-                                </div>
-                                <div className="col-md-6 col-sm-6 col-xs-12">
-                                  <h6>Seq. Fueling Modified DIYPNP Installation</h6>
-                                  <ImageModal img="assets/images/seq_1_6L_harness_diypnp.png" title="Seq. Fueling Modified DIYPNP Installation" />
-                                </div>
-                              </div>{/*//row*/}
-                              <div className="callout-block callout-success">
-                                <div className="icon-holder">
-                                  <i className="fa fa-thumbs-up" />
-                                </div>{/*//icon-holder*/}
-                                <div className="content">
-                                  <h4 className="callout-title">Useful DIYPNP Tip:</h4>
-                                  <p>Two additional fuel injector drivers must be installed in the proto area of the DIYPNP for this upgrade to work.  More informaiton on this modification can be <a href="#">found here</a>.</p>
-                                </div>{/*//content*/}
-                              </div>{/*//callout-block*/}
-                              <h6>Firing Order</h6>
-                              <pre className=" language-php"><code className=" language-php">You must wire <span className="token constant">INJ</span> A<span className="token punctuation">,</span> B<span className="token punctuation">,</span> C<span className="token punctuation">,</span> <span className="token operator">&amp;</span> D in the firing order<span className="token punctuation">:</span> <span className="token number">1</span><span className="token punctuation">,</span><span className="token number">3</span><span className="token punctuation">,</span><span className="token number">4</span><span className="token punctuation">,</span><span className="token number">2</span><span className="token punctuation">.</span>{"\n"}<span className="token constant">INJ</span> A – Cylinder <span className="token number">1</span>{"\n"}<span className="token constant">INJ</span> B – Cylinder <span className="token number">3</span>{"\n"}<span className="token constant">INJ</span> C – Cylinder <span className="token number">4</span>{"\n"}<span className="token constant">INJ</span> D – Cylinder <span className="token number">2</span>{"\n"}</code></pre>
-                            </div>{/*//section-block*/}
+
                           </section>{/*//doc-section*/}
                         </div>{/*//content-inner*/}
                       </div>{/*//doc-content*/}

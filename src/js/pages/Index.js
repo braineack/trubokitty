@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import { Link } from "react-router";
 import Article from "../components/Articles";
 import ArticlesStore from "../stores/ArticlesStore";
+import ImageModal from "../components/Modal";
+
 
 export default class Index extends React.Component {
   constructor() {
@@ -31,8 +33,11 @@ export default class Index extends React.Component {
             <p>Welcome to TruboKitty.com. This site is dedicated to assist in the assembly of PnP Megasquirt 3x and DIYPNP units for 1990-2005 Mazda Miata installs.  My guides will cover what to order, what tools are required, how to build your megasquirt, all the way through installation and tuning.</p>
             <p>These guides were created from over 10 years of Megasquirt assemblies under my belt, and include all the special tricks and tips that I{"''"}ve learned and ultize myself to this day.</p>
             </div>
-            <div class="cards-wrapper row">
+            <div class="links-wrapper">
             {Articles}
+            <div className="qr">
+              <ImageModal img="assets/images/fb_qr.jpg" title="MiataTurbo.net - Official Facebook Group" mask="true" alt="QR Code"/>
+            </div>
             </div>
           </div>
         </section>
