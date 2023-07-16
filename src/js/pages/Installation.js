@@ -17,7 +17,7 @@ export default class Installation extends React.Component {
   render() {
     const AffixNav = (
       <div viewportOffsetTop={20} container={this}>
-        <Scrollspy items={ ['components', 'connecting-ms', 'wiring-peripherals', 'nuances'] } currentClassName="active" id="doc-menu" className="nav doc-menu hidden-xs">
+        <Scrollspy items={ ['components', 'connecting-ms', 'wiring-peripherals', 'nuances'] } currentClassName="active" id="doc-menu" className="nav doc-menu hidden-xs hidden-sm">
             <li><Scrollchor to="#components">Required Tools</Scrollchor></li>
             <li><Scrollchor to="#connecting-ms">Connecting the Megasquirt</Scrollchor></li>
             <li><Scrollchor to="#wiring-peripherals">Wiring the Peripherals</Scrollchor>
