@@ -34,11 +34,11 @@ export default class Index extends React.Component {
             <p>These guides were created from over 10 years and hundreds of Megasquirt assemblies under my belt, and include all the special tricks and tips that I--<strong>Braineack</strong>--learned and utilize myself to this day.</p>
             <p>If you have any questions, find me on miatatubo.net</p>
             </div>
-            <div class="links-wrapper mb-3">
+            <div class="links-wrapper mb-5">
             {Articles}
             </div>
             <div className="mtlogo-holder">
-              <div><a href="http://www.miataturbo.net" target="_blank"><img className="img-responsive" src="assets/images/logo.png" alt="miatatubo.net logo" /><span className="sr-only">Miataturbo.net</span></a></div>
+              <div><a href="http://www.miataturbo.net" target="_blank"><img src="assets/images/logo.png" alt="miatatubo.net logo" /><span className="sr-only">Miataturbo.net</span></a></div>
               <div><a href="https://www.facebook.com/groups/miataturbonet" target="_blank" ><i className="fab fa-facebook"></i><span className="sr-only">Follow Miataturbo.net on Facebook</span></a></div>
             </div>
           </div>

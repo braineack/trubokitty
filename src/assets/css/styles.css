@@ -34,12 +34,16 @@ p {
   line-height: 1.5;
 }
 
+.landing-page {
+  min-height: calc(100vh - 50px);
+}
 
 .links-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25em;
   justify-content: center;
+  margin-bottom: 1.5em;
 }
 .mtlogo-holder {
   justify-content: center;
@@ -50,7 +54,7 @@ p {
 }
 
 .mtlogo-holder a {
-  color: var(--bs-pink);
+  color: #e83e8c;
 }
 
 a {
