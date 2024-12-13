@@ -34,7 +34,7 @@ class ArticlesStore extends EventEmitter {
       {
         id: 4,
         link: "tune",
-        title: "Tuning & Tips",
+        title: "Basemaps, Tuning & Tips",
         text: "Basemaps and a quick walkthrough of tuning your newly installed MS ECU",
         color: "blue",
         icon: "fa fa-wrench icon"

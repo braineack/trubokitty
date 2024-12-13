@@ -6,7 +6,7 @@ class Connector0105 extends EventEmitter {
     super()
     this.pages = [
       {id:'2A',wirecolor:'INJ A',function:'INJ A', mscolor:'W', pin:'X - 19', output:'(CLY 1)', squarecolor:'filled', fullfunction:'Injector A', fullcolor:'White'},
-      {id:'2B',wirecolor:'FAN',function:'FAN', mscolor:'WB', pin:'X - 1', output:'INJ G', squarecolor:'WB BTXT', fullfunction:'Main Fan Output', fullcolor:'White/Blue'},
+      {id:'2B',wirecolor:'MRELAY',function:'MRELAY', mscolor:'LTGRN', pin:'X - 24', output:'NTRS1', squarecolor:'LTGRN', fullfunction:'Main Relay Switch', fullcolor:'Lt Green'},
       {id:'2C',wirecolor:'A/CFAN',function:'A/C FAN', mscolor:'WG', pin:'X - 4', output:'INJ F', squarecolor:'filled', fullfunction:'A/C Fan Output', fullcolor:'White/Green'},
       {id:'2D',wirecolor:'INJ D',function:'INJ D', mscolor:'WP', pin:'X - 10', output:'(CLY 2)', squarecolor:'filled', fullfunction:'Injector D', fullcolor:'White/Pink'},
       {id:'2E',wirecolor:'',function:'', mscolor:'', pin:'', output:'', squarecolor:'', fullfunction:'', fullcolor:''},
@@ -28,8 +28,8 @@ class Connector0105 extends EventEmitter {
       {id:'3D',wirecolor:'',function:'', mscolor:'', pin:'', output:'', squarecolor:'', fullfunction:'', fullcolor:''},
       {id:'3E',wirecolor:'',function:'', mscolor:'', pin:'', output:'', squarecolor:'', fullfunction:'', fullcolor:''},
       {id:'3F',wirecolor:'IGNA',function:'IGN A', mscolor:'Y', pin:'X - 14', output:'', squarecolor:'filled', fullfunction:'Spark A', fullcolor:'Yellow'},
-      {id:'3H',wirecolor:'MRELAY',function:'MRELAY', mscolor:'LTGRN', pin:'X - 24', output:'NTRS1', squarecolor:'LTGRN', fullfunction:'Main Relay Switch', fullcolor:'Lt Green'},
-      {id:'3I',wirecolor:'INGB',function:'IGN B', mscolor:'YO', pin:'X - 33', output:'', squarecolor:'filled', fullfunction:'Spark B', fullcolor:'Yellow/Orange'},
+      {id:'3H', wirecolor: 'FAN', function: 'FAN', mscolor: 'WB', pin: 'X - 1', output: 'INJ G', squarecolor: 'WB BTXT', fullfunction: 'Main Fan Output', fullcolor: 'White/Blue' },
+      {id:'3I', wirecolor: 'INGB', function: 'IGN B', mscolor: 'YO', pin: 'X - 33', output: '', squarecolor: 'filled', fullfunction: 'Spark B', fullcolor: 'Yellow/Orange' },
       {id:'3J',wirecolor:'',function:'', mscolor:'', pin:'', output:'', squarecolor:'', fullfunction:'', fullcolor:''},
       {id:'3K',wirecolor:'',function:'', mscolor:'', pin:'', output:'', squarecolor:'', fullfunction:'', fullcolor:''},
       {id:'3L',wirecolor:'',function:'', mscolor:'', pin:'', output:'', squarecolor:'', fullfunction:'', fullcolor:''},

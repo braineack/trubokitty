@@ -23,12 +23,15 @@ export default class Tune extends React.Component {
     var siteName = 'truboKitty.com -- '
     document.title = siteName + info.title;
     var folder = 'assets/tunes/'
-    var ms3version = '1.4.1'
+    var ms3version = '1.5.1'
     var diypnpversion = '3.4.2'
     var msq9093ms3x = folder + 'ms3x_90-93_' + ms3version + '.msq';
     var msq9497ms3x = folder + 'ms3x_94-97_' + ms3version + '.msq';
     var msq9900ms3x = folder + 'ms3x_99-00_' + ms3version + '.msq';
     var msq0105ms3x = folder + 'ms3x_01-05_' + ms3version + '.msq';
+     var msq0305ms3x = folder + 'ms3x_03-05_' + ms3version + '.msq';
+    var msq0105ev14ms3x = folder + 'ms3x_01-05_ev14' + ms3version + '.msq';
+    var msq0305ev14ms3x = folder + 'ms3x_03-05_ev14' + ms3version + '.msq';
     var msqmsmms3x = folder + 'ms3x_MSM_' + ms3version + '.msq';
     var msq9093diypnp = folder + 'DIYPNP_90-93_' + diypnpversion + '.msq';
     var msq9497diypnp = folder + 'DIYPNP_94-97_' + diypnpversion + '.msq';
@@ -54,7 +57,7 @@ export default class Tune extends React.Component {
               <div id="doc-header" class="doc-header text-center">
                 <h1 class="doc-title"><span aria-hidden="true" class={info.icon}></span> {info.title}</h1>
                 <div class="meta"><i class="fa fa-clock-o"></i>
-                 &nbsp; Last updated: Mar 17th, 2017
+                 &nbsp; Last updated: May 25th, 2024
                 </div>
               </div>
               <div className="doc-body">
@@ -111,6 +114,12 @@ export default class Tune extends React.Component {
                           <div className="col-md-4 col-sm-6 col-xs-12">
                             <h6>01-05 MS3x Basemap:</h6>
                             <p><a href={msq0105ms3x} class={btnColor} target="_blank"><i class="fa fa-download"></i> Download Basemap</a></p>
+                            <p><a href={msq0105ev14ms3x} class={btnColor} target="_blank"><i class="fa fa-download"></i> EV14 Inj. Basemap</a></p>
+                          </div>
+                          <div className="col-md-4 col-sm-6 col-xs-12">
+                            <h6>03-05 MS3x Basemap:</h6>
+                            <p><a href={msq0305ms3x} class={btnColor} target="_blank"><i class="fa fa-download"></i> Download Basemap</a></p>
+                            <p><a href={msq0305ev14ms3x} class={btnColor} target="_blank"><i class="fa fa-download"></i> EV14 Inj. Basemap</a></p>
                           </div>
                           <div className="col-md-4 col-sm-6 col-xs-12">
                             <h6>MSM MS3x Basemap:</h6>

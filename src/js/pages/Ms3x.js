@@ -59,7 +59,7 @@ export default class Ms3x extends React.Component {
               <div id="doc-header" class="doc-header text-center">
                 <h1 class="doc-title"><span aria-hidden="true" class={info.icon}></span> {info.title}</h1>
                 <div class="meta"><i class="fa fa-clock-o"></i>
-                 &nbsp; Last updated: July 20th, 2017
+                 &nbsp; Last updated: May 25th, 2024
                 </div>
               </div>
               <div className="doc-body">
@@ -229,17 +229,18 @@ export default class Ms3x extends React.Component {
                         <p>Turn <strong>R56</strong> (12) turns to the fully counterclockwise, then turn it back 7½ turns clockwise.</p>
                         <p>Now do the same for the pots on the Expander itself:</p>
                         <p>Turn both <strong>R11</strong> & <strong>R32</strong> (6) turns to the fully counterclockwise. Turn <strong>R11</strong> back 3½ turns clockwise.  Do not turn R32 clockwise.</p>
-                        <div className="row">
+                        <p>Finally, before fitting the ribbons and installing on the mainboard, with the remaining wire provided in the kit, solder the <a href="http://www.msextra.com/doc/pdf/html/MS3XV30_Hardware-1.4.pdf/MS3XV30_Hardware-1.4-232.html" target="_blank">Flyback modification</a> wire from <strong>s12</strong> on the Mainboard to <strong>D1 (c)</strong> on the Expander.  Use hot glue to secure the wire soldered on D1 to prevent any stress.</p>
+
+                        <div className="row topPad">
                           <div className="col-md-12 col-sm-12 col-xs-12">
+                            <h6>For NB (99-05) installations:</h6>
                             <p>The Expander Board needs a 5v Pull-up using a 1K resistor on the VVT output to properly control the NB alternator.</p>
                           </div>
                           <div className="col-md-6 col-sm-6 col-xs-12">
-                            <h6>For NB (99-05) installations:</h6>
                             <p>Using an unused 1K resistor from the MS3 Kit, jump <strong>VCC</strong> to the <strong>VVT output</strong> pin as pictured above.  Use heatshrink over your solder joints to prevent any shortcircuiting.</p>
                             <ImageModal img="assets/images/alternator_pullup.jpg" title="VVT Output 5v Pull-up" caption="The Expander Board needs a 5v Pull-up using a 1K resistor on the VVT output to properly control the NB alternator." />
                           </div>
                         </div>
-                        <p>Finally, before fitting the ribbons and installing on the mainboard, with the remaining wire provided in the kit, solder the <a href="http://www.msextra.com/doc/pdf/html/MS3XV30_Hardware-1.4.pdf/MS3XV30_Hardware-1.4-232.html" target="_blank">Flyback modification</a> wire from <strong>s12</strong> on the Mainboard to <strong>D1 (c)</strong> on the Expander.  Use hot glue to secure the wire soldered on D1 to prevent any stress.</p>
 
                       </div>{/*//section-block*/}
 

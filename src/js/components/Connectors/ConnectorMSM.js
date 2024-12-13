@@ -10,6 +10,7 @@ import Wire from "./wire";
 import WireT from "./wireT";
 import Label from "./Label";
 import LabelT from "./LabelT";
+import TableMSM from "./TableMSM";
 
 const diagram = DiagramMSM.getAll();
 
@@ -287,6 +288,7 @@ export default class ConnectorMSM extends React.Component {
             </div>
           </div>
         </div>
+        <TableMSM />
         </div>
 
       );

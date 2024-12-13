@@ -10,6 +10,7 @@ import Wire from "./wire";
 import WireT from "./wireT";
 import Label from "./Label";
 import LabelT from "./LabelT";
+import Table0105 from "./Table0105";
 
 const diagram = Diagram0105.getAll();
 
@@ -287,6 +288,7 @@ export default class Connector0105 extends React.Component {
             </div>
           </div>
         </div>
+        <Table0105 />
         </div>
 
       );

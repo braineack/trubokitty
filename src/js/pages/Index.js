@@ -32,9 +32,9 @@ export default class Index extends React.Component {
             <div className="intro">
             <p>Welcome to TruboKitty.com. This site is dedicated to assist in the assembly of Plug-and-Play Megasquirt 3x and DIYPNP units for 1990-2005 Mazda Miata installs.  My guides will cover what to order, what tools are required, how to build your megasquirt--all the way through installation and tuning.</p>
             <p>These guides were created from over 10 years and hundreds of Megasquirt assemblies under my belt, and include all the special tricks and tips that I--<strong>Braineack</strong>--learned and utilize myself to this day.</p>
-            <p>If you have any questions, find me on miatatubo.net</p>
+            <p>If you have any questions, find me on <a href="http://www.miataturbo.net" target="_blank">miataturbo.net</a></p>
             </div>
-            <div class="links-wrapper mb-5">
+            <div class="links-wrapper">
             {Articles}
             </div>
             <div className="mtlogo-holder">

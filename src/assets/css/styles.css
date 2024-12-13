@@ -21,9 +21,8 @@ body {
   display: block;
   height: 50px;
 }
-.footer {
-  height: 50px;
-}
+
+
 li:first-of-type {
     padding-top: inherit;
 }
@@ -34,8 +33,16 @@ p {
   line-height: 1.5;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .landing-page {
-  min-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .links-wrapper {
@@ -435,6 +442,11 @@ select {
 .footer .fa-heart {
   color: #EA5395;
 }
+
+.footer .mk-pre-footer {
+    margin-bottom: 0.5rem;
+}
+
 /* ======= Doc Styling ======= */
 .doc-wrapper {
   padding: 45px 0;
@@ -1186,6 +1198,7 @@ li > .table-responsive > table {
   display: inline-block;
 }
 .cards-section {
+  flex: 1;
   padding: 60px 0;
   background: #f9f9fb;
 }

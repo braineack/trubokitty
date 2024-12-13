@@ -5,6 +5,7 @@ import Square from "./Square";
 import Spacer from "./Spacer";
 import Wire from "./wire";
 import Label from "./Label";
+import Table9697 from "./Table9697";
 
 const diagram = Diagram9697.getAll();
 
@@ -291,6 +292,7 @@ export default class Connector9697 extends React.Component {
             </div>
           </div>
         </div>
+        <Table9697 />
         </div>
 
       );
