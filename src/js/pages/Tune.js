@@ -30,8 +30,8 @@ export default class Tune extends React.Component {
     var msq9900ms3x = folder + 'ms3x_99-00_' + ms3version + '.msq';
     var msq0105ms3x = folder + 'ms3x_01-05_' + ms3version + '.msq';
      var msq0305ms3x = folder + 'ms3x_03-05_' + ms3version + '.msq';
-    var msq0105ev14ms3x = folder + 'ms3x_01-05_ev14' + ms3version + '.msq';
-    var msq0305ev14ms3x = folder + 'ms3x_03-05_ev14' + ms3version + '.msq';
+    var msq0105ev14ms3x = folder + 'ms3x_01-05_ev14_' + ms3version + '.msq';
+    var msq0305ev14ms3x = folder + 'ms3x_03-05_ev14_' + ms3version + '.msq';
     var msqmsmms3x = folder + 'ms3x_MSM_' + ms3version + '.msq';
     var msq9093diypnp = folder + 'DIYPNP_90-93_' + diypnpversion + '.msq';
     var msq9497diypnp = folder + 'DIYPNP_94-97_' + diypnpversion + '.msq';
@@ -57,7 +57,7 @@ export default class Tune extends React.Component {
               <div id="doc-header" class="doc-header text-center">
                 <h1 class="doc-title"><span aria-hidden="true" class={info.icon}></span> {info.title}</h1>
                 <div class="meta"><i class="fa fa-clock-o"></i>
-                 &nbsp; Last updated: May 25th, 2024
+                 &nbsp; Last updated: Dec 13th, 2024
                 </div>
               </div>
               <div className="doc-body">
